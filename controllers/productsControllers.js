@@ -39,7 +39,30 @@ const getProduct  =  async (req,res,id)=>{
     }
 
 }
+
+// @desc get all products
+// @route  POST/api/products/add
+const createProduct  =  async (req,res)=>{
+    try {
+        const product ={
+            title:'Test product',
+            description:'This my product',
+            price:100
+
+        }
+        const newProduct = await Product.create(product)
+        res.writeHead(201,{'Content-Type':'application'})
+        res.end(JSON.stringify(newProduct))
+        
+        
+    } 
+    catch (error) {
+        console.log(error)
+    }
+
+}
 module.exports={
     getAllProducts,
-    getProduct
+    getProduct,
+    createProduct
 }
