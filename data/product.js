@@ -14,6 +14,6 @@ const products =[
 
     }
 ]
- module.exports={
+ module.exports=
     products
- }
+ 

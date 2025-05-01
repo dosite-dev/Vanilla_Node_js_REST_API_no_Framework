@@ -5,7 +5,15 @@ const products = require('../data/product')
 
     })
  }
+ const findById =(id) =>{
+    return new Promise((resolve,reject)=>{
+        const product = products.find((p) => p.id === Number(id))
+        resolve(product)
+
+    })
+ }
 
  module.exports = {
-    findAll
+    findAll,
+    findById
  }
