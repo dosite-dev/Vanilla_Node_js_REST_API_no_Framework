@@ -1,0 +1,22 @@
+{
+  "name": "vanilla_node_js_rest_api_no_framework",
+  "version": "1.0.0",
+  "description": "This repository contain REST API using Node js without Express.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dosite-dev/Vanilla_Node_js_REST_API_no_Framework.git"
+  },
+  "author": "Dosite",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dosite-dev/Vanilla_Node_js_REST_API_no_Framework/issues"
+  },
+  "homepage": "https://github.com/dosite-dev/Vanilla_Node_js_REST_API_no_Framework#readme",
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
