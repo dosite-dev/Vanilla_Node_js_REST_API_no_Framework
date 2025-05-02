@@ -1,5 +1,5 @@
 
-const products = require('../data/product')
+let products = require('../data/product')
 const {v11: uuidv11} = require('uuid')
 
 const {writeDataToFile} = require('../utilis')
@@ -37,10 +37,20 @@ const {writeDataToFile} = require('../utilis')
 
    })
 }
+const remove =(id) =>{
+   return new Promise((resolve,reject)=>{
+      products = products.filter((p) => p.id !== id)
+       writeDataToFile('./data/product.js',products)
+       resolve()
+      
+
+   })
+}
 
  module.exports = {
     findAll,
     findById,
     create,
-    update
+    update,
+    remove
  }
