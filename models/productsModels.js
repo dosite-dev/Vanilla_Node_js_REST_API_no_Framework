@@ -2,7 +2,7 @@
 const products = require('../data/product')
 const {v11: uuidv11} = require('uuid')
 
-const {writeDataToFile} = require('./utilis')
+const {writeDataToFile} = require('../utilis')
 
  const findAll =() =>{
     return new Promise((resolve,reject)=>{
@@ -23,6 +23,7 @@ const {writeDataToFile} = require('./utilis')
         products.push(newProduct)
         writeDataToFile('./data/product.js',products)
         resolve(newProduct)
+
 
     })
  }

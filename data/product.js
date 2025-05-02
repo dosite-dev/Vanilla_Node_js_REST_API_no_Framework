@@ -1,3 +1,2 @@
-[{"title":"Test product","description":"This my product","price":100}]
-// ../data/product.js
-module.exports = [];
+const products=[{"title":"Brads product  2","description":"This brads product 2","price":750}]
+module.exports= products
