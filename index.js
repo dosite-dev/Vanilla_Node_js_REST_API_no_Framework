@@ -1,5 +1,5 @@
 const http = require('http')
-const {getAllProducts,getProduct,createProduct} = require('./controllers/productsControllers')
+const {getAllProducts,getProduct,createProduct,updateProduct} = require('./controllers/productsControllers')
 const PORT = process.env.PORT || 5000
 const server = http.createServer((req,res) => {
     if(req.url === '/api/products' && req.method === 'GET'){
@@ -13,6 +13,12 @@ else if(req.url.match('/api/products/([0-9])+') && req.method ==='GET'){
 }
 else if(req.url === '/api/products/add' && req.method === 'POST'){
     createProduct(req,res)
+}
+else if(req.url.match('/api/products/update/([0-9])+') && req.method ==='PUT'){
+    const id = req.url.split("/")[4]
+    console.log(id)
+    updateProduct(req,res,id)
+
 }
 else{
     res.writeHead(404,{'Content-Type':'application/json'})
